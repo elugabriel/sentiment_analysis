@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Sentiment Analysis</h1>
+        <form action="/index" method="POST">
+            <div class="input-container">
+                <textarea rows="10" cols="60" name="text" placeholder="Write or paste the transaction below"></textarea>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="btn btn-primary">Analyze</button>
+            </div>
+        </form>
+    </div>
+
+    
+    <p>Sentiment: {{ sentiment }}</p>
+
+</body>
+</html>
+
+
